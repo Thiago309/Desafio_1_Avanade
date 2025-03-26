@@ -6,10 +6,9 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "tb_pagamento")  // Usando @Table para nome de tabela
+@Table(name ="tb_pagamento")  // Usando @Table para nome de tabela
 public class Pagamento {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPagamento;  // Alterado para Long e nome padronizado
 
     @OneToOne(cascade = CascadeType.ALL)

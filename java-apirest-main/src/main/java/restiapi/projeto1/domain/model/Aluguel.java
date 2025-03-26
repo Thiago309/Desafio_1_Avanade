@@ -4,11 +4,10 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-
-@Entity(name = "tb_registro")
+@Entity
+@Table(name="tb_aluguel")
 public class Aluguel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAluguel;  // Padronizar para Long ao invés de long
 
     @OneToOne(cascade = CascadeType.ALL)

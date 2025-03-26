@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 @Table(name = "tb_veiculos")  // Usando @Table para nome de tabela
 public class Veiculo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idVeiculo;  // Alterado para Long e nome padronizado
 
     @Column(name = "placa", unique = true)  // Placa deve ser única

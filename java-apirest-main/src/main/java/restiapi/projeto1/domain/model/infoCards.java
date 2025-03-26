@@ -3,10 +3,10 @@ package restiapi.projeto1.domain.model;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
-@Entity(name = "tb_cartoes")
+@Entity
+@Table(name = "tb_cartoes")
 public class infoCards {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCartao;
 
     @Column(name = "numero_cartao", nullable = false, length = 16, unique = true)

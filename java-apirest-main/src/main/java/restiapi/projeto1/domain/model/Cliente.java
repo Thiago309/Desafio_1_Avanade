@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 @Table(name = "tb_cliente")  // Usando @Table para nome de tabela
 public class Cliente {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente;  // Alterado para Long e nome padronizado
 
     @Column(name = "nome", nullable = false)
