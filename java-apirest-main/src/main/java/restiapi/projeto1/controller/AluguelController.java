@@ -1,6 +1,5 @@
 package restiapi.projeto1.controller;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +24,6 @@ public class AluguelController {
         var aluguel = aluguelService.findById(idAluguel);
         return ResponseEntity.ok(aluguel);
     }
-
 
     @PostMapping
     public ResponseEntity<Aluguel> create(@RequestBody Aluguel aluguelToCreate) {
