@@ -1,6 +1,8 @@
 package restiapi.projeto1.domain.model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
