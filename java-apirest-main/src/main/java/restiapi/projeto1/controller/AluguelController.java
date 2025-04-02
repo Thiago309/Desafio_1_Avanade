@@ -34,4 +34,14 @@ public class AluguelController {
                 .toUri();
         return ResponseEntity.created(location).body(aluguelCreated);
     }
+
+    @PutMapping("/{idAluguel}")
+    public ResponseEntity<Aluguel> update(@RequestBody Aluguel aluguelToUpdate) {
+        var aluguelUpdated = aluguelService.update(aluguelToUpdate);
+        return ResponseEntity.ok(aluguelUpdated);
+    }
+
+    @DeleteMapping("")
+    public ResponseEntity<Aluguel> delete(@RequestBody Aluguel aluguelToDelete) {
+    }
 }

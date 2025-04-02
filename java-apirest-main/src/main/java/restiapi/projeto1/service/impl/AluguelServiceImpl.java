@@ -28,4 +28,14 @@ public class AluguelServiceImpl implements AluguelService {
         }
         return aluguelRepository.save(aluguelToCreate);
     }
+
+    @Override
+    public Aluguel update(Aluguel aluguelToUpdate) {
+        if(aluguelRepository.existsById(aluguelToUpdate.getIdAluguel())){
+            throw new IllegalArgumentException("Registro de aluguel não encontrado na base de dados.");
+        }
+        return aluguelRepository.save(aluguelToUpdate);
+    }
+
+
 }

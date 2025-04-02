@@ -5,4 +5,6 @@ public interface AluguelService {
 
     Aluguel findById(Long idAluguel);
     Aluguel create(Aluguel aluguelToCreate);
+    Aluguel update(Aluguel aluguelToUpdate);
+
 }
