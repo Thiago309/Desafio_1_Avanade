@@ -43,5 +43,18 @@ public class infoCards {
 
     public BigDecimal getValor() {return valor;}
     public void setValor(BigDecimal valor) {this.valor = valor;}
+
+    @Override
+    public String toString() {
+        return "infoCards{" +
+                "idCartao=" + idCartao +
+                ", numero=" + numero +
+                ", cvv=" + cvv +
+                ", bandeira='" + bandeira + '\'' +
+                ", titular='" + titular + '\'' +
+                ", parcelas=" + parcelas +
+                ", valor=" + valor +
+                '}';
+    }
 }
 

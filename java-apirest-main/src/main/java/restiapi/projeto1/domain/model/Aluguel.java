@@ -49,4 +49,17 @@ public class Aluguel {
 
     public BigDecimal getValorTotal() {return valorTotal;}
     public void setValorTotal(BigDecimal valorTotal) {this.valorTotal = valorTotal;}
+
+    @Override
+    public String toString() {
+        return "Aluguel{" +
+                "idAluguel=" + idAluguel +
+                ", veiculo=" + veiculo +
+                ", cliente=" + cliente +
+                ", pagamento=" + pagamento +
+                ", dataInicio=" + dataInicio +
+                ", dataFim=" + dataFim +
+                ", valorTotal=" + valorTotal +
+                '}';
+    }
 }

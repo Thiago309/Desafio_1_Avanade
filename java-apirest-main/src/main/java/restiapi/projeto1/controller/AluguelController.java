@@ -31,7 +31,7 @@ public class AluguelController {
         return ResponseEntity.ok(aluguelDeleted);
     }
 
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<Aluguel> create(@RequestBody Aluguel aluguelToCreate) {
         var aluguelCreated = aluguelService.create(aluguelToCreate);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
