@@ -40,7 +40,7 @@ public class AluguelController {
                 .toUri();
         return ResponseEntity.created(location).body(aluguelCreated);
     }
-/*
+
     @PutMapping("/alugueis/{id}")  // ID na URL
     public ResponseEntity<Aluguel> atualizarAluguel(
             @PathVariable Long id,          // 👈 Captura o ID da URL
@@ -54,13 +54,13 @@ public class AluguelController {
         Aluguel aluguelAtualizado = aluguelService.update(aluguel);
         return ResponseEntity.ok(aluguelAtualizado);
     }
-    */
 
 
+/*
     @PutMapping("")
     public ResponseEntity<Aluguel> update(@RequestBody Aluguel aluguelToUpdate) {
         var aluguelUpdated = aluguelService.update(aluguelToUpdate);
         return ResponseEntity.ok(aluguelUpdated);
     }
-
+*/
 }
