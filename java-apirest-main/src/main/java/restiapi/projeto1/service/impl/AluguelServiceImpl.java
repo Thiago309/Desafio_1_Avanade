@@ -22,8 +22,21 @@ public class AluguelServiceImpl implements AluguelService {
     }
 
     @Override
+    public Aluguel deleteById(Long idAluguel) {
+        // 1. Primeiro busca o aluguel para retorná-lo depois da deleção
+        Aluguel aluguel = aluguelRepository.findById(idAluguel)
+                .orElseThrow(() -> new NoSuchElementException("Aluguel não encontrado com ID: " + idAluguel));
+
+        // 2. Deleta o recurso
+        aluguelRepository.deleteById(idAluguel);
+
+        // 3. Retorna o objeto deletado
+        return aluguel;
+    }
+
+    @Override
     public Aluguel create(Aluguel aluguelToCreate) {
-        if(aluguelRepository.existsById(aluguelToCreate.getIdAluguel())){
+        if (aluguelRepository.existsById(aluguelToCreate.getIdAluguel())) {
             throw new IllegalArgumentException("Registro de aluguel ja existe no banco de dados.");
         }
         return aluguelRepository.save(aluguelToCreate);
@@ -31,11 +44,9 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Override
     public Aluguel update(Aluguel aluguelToUpdate) {
-        if(aluguelRepository.existsById(aluguelToUpdate.getIdAluguel())){
-            throw new IllegalArgumentException("Registro de aluguel não encontrado na base de dados.");
+        if (aluguelRepository.existsById(aluguelToUpdate.getIdAluguel())) {
+            throw new IllegalArgumentException("Registro de aluguel encontrado e atualizado no banco de dados.");
         }
         return aluguelRepository.save(aluguelToUpdate);
     }
-
-
 }
