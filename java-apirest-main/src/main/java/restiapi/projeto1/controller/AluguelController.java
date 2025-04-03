@@ -41,26 +41,14 @@ public class AluguelController {
         return ResponseEntity.created(location).body(aluguelCreated);
     }
 
-    @PutMapping("/alugueis/{id}")  // ID na URL
-    public ResponseEntity<Aluguel> atualizarAluguel(
-            @PathVariable Long id,          // 👈 Captura o ID da URL
-            @RequestBody Aluguel aluguel    // 👈 Corpo com dados para atualização
-    ) {
+    @PutMapping("/{idAluguel}")  // ID na URL
+    public ResponseEntity<Aluguel> atualizarAluguel(@PathVariable Long idAluguel, @RequestBody Aluguel aluguelToUpdate) {
         // Validação de consistência
-        if (!id.equals(aluguel.getIdAluguel())) {
+        if (!idAluguel.equals(aluguelToUpdate.getIdAluguel())) {
             return ResponseEntity.badRequest().build();
         }
 
-        Aluguel aluguelAtualizado = aluguelService.update(aluguel);
+        Aluguel aluguelAtualizado = aluguelService.update(aluguelToUpdate);
         return ResponseEntity.ok(aluguelAtualizado);
     }
-
-
-/*
-    @PutMapping("")
-    public ResponseEntity<Aluguel> update(@RequestBody Aluguel aluguelToUpdate) {
-        var aluguelUpdated = aluguelService.update(aluguelToUpdate);
-        return ResponseEntity.ok(aluguelUpdated);
-    }
-*/
 }

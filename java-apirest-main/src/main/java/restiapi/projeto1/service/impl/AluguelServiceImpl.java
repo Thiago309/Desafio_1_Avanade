@@ -44,8 +44,9 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Override
     public Aluguel update(Aluguel aluguelToUpdate) {
-        if (aluguelRepository.existsById(aluguelToUpdate.getIdAluguel())) {
-            throw new IllegalArgumentException("Registro de aluguel encontrado e atualizado no banco de dados.");
+        // Verifica se o registro NÃO existe (correto)
+        if (!aluguelRepository.existsById(aluguelToUpdate.getIdAluguel())) {
+            throw new NoSuchElementException("Registro de aluguel não encontrado com ID: " + aluguelToUpdate.getIdAluguel());
         }
         return aluguelRepository.save(aluguelToUpdate);
     }
