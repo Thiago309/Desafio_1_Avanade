@@ -47,7 +47,7 @@ public class AluguelController {
     }
 
     @Operation(summary = "Atualiza informações de um registro de aluguel da Base de Dados")
-    @PutMapping("/{idAluguel}")  // ID na URL
+    @PutMapping("/{idAluguel}")
     public ResponseEntity<Aluguel> atualizarAluguel(@PathVariable Long idAluguel, @RequestBody Aluguel aluguelToUpdate) {
         // Validação de consistência
         if (!idAluguel.equals(aluguelToUpdate.getIdAluguel())) {
