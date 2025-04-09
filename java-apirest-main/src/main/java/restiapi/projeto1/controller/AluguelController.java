@@ -10,7 +10,7 @@ import restiapi.projeto1.service.AluguelService;
 import java.net.URI;
 
 @SpringBootApplication
-@RestController
+@RestController              // Bean para endpoints REST
 @RequestMapping("/alugueis")
 public class AluguelController {
 

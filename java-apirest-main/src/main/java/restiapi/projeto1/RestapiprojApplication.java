@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class RestapiprojApplication {
-	@GetMapping
 	public static void main(String[] args) {
 		SpringApplication.run(RestapiprojApplication.class, args);
 	}

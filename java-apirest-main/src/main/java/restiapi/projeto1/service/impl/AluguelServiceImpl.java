@@ -6,8 +6,7 @@ import restiapi.projeto1.domain.repository.AluguelRepository;
 import restiapi.projeto1.service.AluguelService;
 import java.util.NoSuchElementException;
 
-// metodo de encapsulamento de informaçoes
-@Service
+@Service    // Define um Bean do tipo "serviço" (lógica de negócio). Metodo de encapsulamento de informaçoes
 public class AluguelServiceImpl implements AluguelService {
 
     private AluguelRepository aluguelRepository;
@@ -23,14 +22,14 @@ public class AluguelServiceImpl implements AluguelService {
 
     @Override
     public Aluguel deleteById(Long idAluguel) {
-        // 1. Primeiro busca o aluguel para retorná-lo depois da deleção
+        // Primeiro busca o aluguel para retorná-lo depois da deleção
         Aluguel aluguel = aluguelRepository.findById(idAluguel)
                 .orElseThrow(() -> new NoSuchElementException("Aluguel não encontrado com ID: " + idAluguel));
 
-        // 2. Deleta o recurso
+        // Deleta o recurso
         aluguelRepository.deleteById(idAluguel);
 
-        // 3. Retorna o objeto deletado
+        // Retorna o objeto deletado
         return aluguel;
     }
 
