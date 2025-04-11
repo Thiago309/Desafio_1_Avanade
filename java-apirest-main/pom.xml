@@ -3,10 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
+		<!--Gerenciamento de dependências para aplicações Spring Boot-->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>restiapi</groupId>
 	<artifactId>AVANADE2025</artifactId>
@@ -27,39 +28,62 @@
 		<url/>
 	</scm>
 	<properties>
+		<!--versão do Java utilizada no projeto, que é a 21. Isso garante que o
+		projeto seja compilado e executado coma versão especificada do Java.-->
 		<java.version>21</java.version>
 	</properties>
+	<!--Bibliotecas externas do projeto-->
 	<dependencies>
+		<!--Spring Boot Starters
+		Inclui todas as bibliotecas necessárias para criar aplicações web,
+ 		incluindo o servidor Tomcat embutido.-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!--Fornece suporte ao Spring Data JPA para interagir com bancos de dados
+		relacionais de forma simplificada.-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!--Documentação da API-->
 		<dependency>
+			<!--Esta dependência integra o Springdoc OpenAPI ao seu projeto, gerando automaticamente
+ 			a documentação da API e disponibilizando uma interface Swagger UI-->
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.8.5</version> <!-- Use a versão mais recente -->
 		</dependency>
+
+		<!--Bancos de Dados-->
 		<dependency>
+			<!--Inclui o banco de dados em memória H2, útil para testes e desenvolvimento-->
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<!--Driver JDBC para o banco de dados PostgreSQL, permitindo que sua aplicação
+			se conecte a um banco de dados PostgreSQL em tempo de execução.-->
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+
+		<!--Gerenciamento de Conexões:-->
 		<dependency>
+			<!--Realizar a conexão para ao banco de dados em nuvem Railway.-->
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
-			<version>6.3.0</version>
+			<version>6.3.0</version> <!--Ultima versão-->
 		</dependency>
+
+		<!--Teste-->
 		<dependency>
+			<!--Fornece dependências necessárias para testes unitários e de integração no Spring Boot.-->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -95,5 +119,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
