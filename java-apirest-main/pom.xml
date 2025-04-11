@@ -34,10 +34,10 @@
 	</properties>
 	<!--Bibliotecas externas do projeto-->
 	<dependencies>
-		<!--Spring Boot Starters
-		Inclui todas as bibliotecas necessárias para criar aplicações web,
- 		incluindo o servidor Tomcat embutido.-->
+		<!--Spring Boot Starters-->
 		<dependency>
+			<!--Inclui todas as bibliotecas necessárias para criar aplicações web,
+ 			incluindo o servidor Tomcat embutido.-->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -47,6 +47,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!--Segurança-->
+		<dependency>
+			<!--Fornece segurança contra acessos indevidos na API Springboot-->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 		<!--Documentação da API-->
