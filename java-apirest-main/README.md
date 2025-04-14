@@ -11,6 +11,22 @@ Este projeto é uma API RESTful desenvolvida em Java e Spring Boot, com persist�
 ### Sobre a API
 A API permite o gerenciamento de usuários, contas bancárias, cartões e funcionalidades associadas. A seguir, um diagrama de classes representando o domínio do sistema.
 
+### Mapa de Camadas
+
+No meu projeto Spring Boot, as camadas podem ser mapeadas da seguinte forma:
+
+Camada de Apresentação (AluguelController): Responsável por receber as requisições HTTP e retornar as respostas 
+apropriadas.
+
+Camada de Serviço (AluguelServiceImpl): Contém a lógica de negócio, processando as informações recebidas da camada 
+de apresentação e interagindo com a camada de persistência.
+
+Camada de Persistência (AlguelService): Gerencia a comunicação com o banco de dados, realizando 
+operações de CRUD (Create, Read, Update, Delete).
+
+Camada de Modelo (Package = domain --> model): Define as entidades e seus atributos, representando as tabelas do 
+banco de dados.
+
 ### Diagrama de Classes (Domínio da API)
 
 ```mermaid

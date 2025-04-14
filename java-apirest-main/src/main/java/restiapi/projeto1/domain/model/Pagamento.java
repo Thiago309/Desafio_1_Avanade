@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-
 @Entity
 @Table(name ="tb_pagamento")  // Usando @Table para nome de tabela
 public class Pagamento {
