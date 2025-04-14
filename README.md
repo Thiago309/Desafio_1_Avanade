@@ -96,6 +96,9 @@ Testabilidade: Facilita a criação de testes unitários e de integração.​
 
 Escalabilidade: Permite que o sistema cresça de forma organizada e sustentável.
 
+![image](https://github.com/user-attachments/assets/4010d8cf-ded0-4366-aa0a-37d1337d43aa) ![image](https://github.com/user-attachments/assets/18853087-e564-4769-b477-269da8637fe8)
+
+
 
 ## Deploy no Railway
 
