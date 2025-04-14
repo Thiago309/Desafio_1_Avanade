@@ -1,8 +1,8 @@
-# Desafio_1_Avanade
+## Desafio_1_Avanade
 
 Publicando minha API REST na Nuvem Usando Spring Boot 3.4.4, Java 21 e Railway 2025.
 
- ### Sobre a API
+ ## Sobre a API
 A API permite o gerenciamento de registro de alugueis de veiculos, informações dos cartões e veiculos disponiveis no sitema. A seguir, um diagrama de classes representando o sistema.
 
 ## Diagrama de Classe (Domínio da API)
@@ -69,7 +69,8 @@ classDiagram
     Aluguel "1..1" <-- "1..1" Cliente
 ```
 
-### Mapa de Camadas
+
+## Mapa de Camadas
 
 No meu projeto Spring Boot, as camadas podem ser mapeadas da seguinte forma:
 
@@ -85,7 +86,8 @@ operações de CRUD (Create, Read, Update, Delete).
 Camada de Modelo (Package = domain --> model): Define as entidades e seus atributos, representando as tabelas do 
 banco de dados.
 
-###🎯 Benefícios de Utilizar uma Arquitetura em Camadas
+
+## 🎯 Benefícios de Utilizar uma Arquitetura em Camadas
 Manutenção Facilitada: Alterações em uma camada têm impacto mínimo nas demais.​
 
 Reutilização de Código: Componentes podem ser reutilizados em diferentes partes do sistema.​
@@ -94,12 +96,14 @@ Testabilidade: Facilita a criação de testes unitários e de integração.​
 
 Escalabilidade: Permite que o sistema cresça de forma organizada e sustentável.
 
-### Deploy no Railway
+
+## Deploy no Railway
 
 A API está hospedada no Railway. Para acessar, utilize:
 ```
-vibrant-clarity-production.up.railway.app
+irei disponibilizar
 ```  
+
 
 ## 📌 Endpoints
 
