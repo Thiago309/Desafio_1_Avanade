@@ -3,7 +3,7 @@
 Publicando minha API REST na Nuvem Usando Spring Boot 3.4.4, Java 21 e Railway 2025.
 
  ### Sobre a API
-A API permite o gerenciamento de registro de alugueis de veiculos, informações dos cartões e funcionalidades associadas. A seguir, um diagrama de classes representando o sistema.
+A API permite o gerenciamento de registro de alugueis de veiculos, informações dos cartões e veiculos disponiveis no sitema. A seguir, um diagrama de classes representando o sistema.
 
 ## Diagrama de Classe (Domínio da API)
 
@@ -84,3 +84,20 @@ operações de CRUD (Create, Read, Update, Delete).
 
 Camada de Modelo (Package = domain --> model): Define as entidades e seus atributos, representando as tabelas do 
 banco de dados.
+
+### Deploy no Railway
+
+A API está hospedada no Railway. Para acessar, utilize:
+```
+vibrant-clarity-production.up.railway.app
+```  
+
+## 📌 Endpoints
+
+| Método | Endpoint       | Descrição                           |
+|--------|----------------|-----------------------------------|
+| `GET`  | `/alugueis`    | Retorna um registro de aluguel através do id        |
+| `DELETE` | `/alugueis`  | Deleta o registro de aluguel através do id        |
+| `POST`  | `/alugueis`    | Atualiza um registro de aluguel pelo id       |
+| `CREATE` | `/alugueis`    | Cria um novo registro            |
+
