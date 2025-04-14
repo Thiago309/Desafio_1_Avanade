@@ -85,6 +85,15 @@ operações de CRUD (Create, Read, Update, Delete).
 Camada de Modelo (Package = domain --> model): Define as entidades e seus atributos, representando as tabelas do 
 banco de dados.
 
+###🎯 Benefícios de Utilizar uma Arquitetura em Camadas
+Manutenção Facilitada: Alterações em uma camada têm impacto mínimo nas demais.​
+
+Reutilização de Código: Componentes podem ser reutilizados em diferentes partes do sistema.​
+
+Testabilidade: Facilita a criação de testes unitários e de integração.​
+
+Escalabilidade: Permite que o sistema cresça de forma organizada e sustentável.
+
 ### Deploy no Railway
 
 A API está hospedada no Railway. Para acessar, utilize:
