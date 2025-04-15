@@ -112,8 +112,8 @@ irei disponibilizar
 
 | Método | Endpoint       | Descrição                           |
 |--------|----------------|-----------------------------------|
-| `GET`  | `/alugueis`    | Retorna um registro de aluguel através do id        |
-| `DELETE` | `/alugueis`  | Deleta o registro de aluguel através do id        |
-| `POST`  | `/alugueis`    | Atualiza um registro de aluguel pelo id       |
-| `CREATE` | `/alugueis`    | Cria um novo registro            |
+| `GET`  | `/aluguel-controller/findById`    | Retorna um registro de aluguel através do id        |
+| `DELETE` | `/aluguel-controller/deleteById`  | Deleta o registro de aluguel através do id        |
+| `POST`  | `/aluguel-controller/atualizarAluguel`    | Atualiza um registro de aluguel pelo id       |
+| `CREATE` | `/aluguel-controller/create`    | Cria um novo registro            |
 
